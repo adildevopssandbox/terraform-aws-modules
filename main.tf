@@ -32,3 +32,18 @@ module "rds" {
   subnet_ids            = [module.vpc.subnet_a_id, module.vpc.subnet_b_id]
   rds_subnet_group_name = var.rds_subnet_group_name
 }
+
+# __generated__ by Terraform from "aa-test-import-tf"
+resource "aws_s3_bucket" "aa-import-bucket" {
+  bucket              = "aa-test-import-tf"
+  bucket_prefix       = null
+  force_destroy       = null
+  object_lock_enabled = false
+  tags                = {}
+  tags_all            = {}
+}
+
+#module "ec2" {
+# ...
+#  key_name = module.keypair.ec2_key_name
+#}
